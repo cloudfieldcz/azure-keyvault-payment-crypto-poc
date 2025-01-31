@@ -1,0 +1,28 @@
+###
+POST http://localhost:8080/api/keys/
+Content-Type: application/json
+
+{
+  "keyAlias": "zpk-tdes",
+  "keyData": "ASNFZ4mrze/+3LqYdlQyEAEjRWeJq83v",
+  "keyAlgorithm": "DESede",
+  "keyVersion": "01",
+  "keyType": "ZPK"
+}
+
+###
+GET http://localhost:8080/api/keys/
+
+###
+POST http://localhost:8080/api/payment-crypto/offset
+Content-Type: application/json
+
+{
+  "zpkAlias": "zpk-tdes",
+  "pinBlock": "5AD87C67698D13F4",
+  "pvkAlias": "pvk-tdes",
+  "pan": "6203011199415646",
+  "pinValidationData": "123456N12345",
+  "decimalizationTable": "1234567890987654",
+  "pinLength": 4
+}

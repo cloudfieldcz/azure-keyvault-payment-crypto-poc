@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: user
+    password: secret
+  cloud:
+    azure:
+      keyvault:
+        enabled: true
+  flyway:
+    enabled: true
+
+key-vault:
+  url: ${KEY_VAULT_URL}
+
+master-key-alias: my-rsa-key

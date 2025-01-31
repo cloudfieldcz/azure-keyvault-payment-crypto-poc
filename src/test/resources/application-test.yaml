@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:postgresql:latest:///kvpc?TC_TMPFS=/testtmpfs:rw&TC_DAEMON=true
+    username:
+    password:
+  cloud:
+    azure:
+      keyvault:
+        enabled: false
